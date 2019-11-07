@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/arts/white background HD.png" type="Texture" id=1]
+[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://logo.png" type="Texture" id=3]
+[ext_resource path="res://assets/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 75
+font_data = ExtResource( 4 )
+
+[node name="Main" type="TextureRect"]
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="icon" type="Sprite" parent="."]
+position = Vector2( 914.683, 368.853 )
+texture = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 540.024
+margin_top = 561.686
+margin_right = 1310.02
+margin_bottom = 742.686
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Controller"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 398.68
+margin_top = 774.278
+margin_right = 1444.68
+margin_bottom = 865.278
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Created By Michael Jalloh"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 514.077
+margin_top = 880.704
+margin_right = 1306.08
+margin_bottom = 971.704
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Built with Godot 3.1"
+

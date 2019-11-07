@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/arts/JoystickSplitted.png" type="Texture" id=1]
+[ext_resource path="res://utils/JoyStick.gd" type="Script" id=2]
+[ext_resource path="res://assets/arts/SmallHandle.png" type="Texture" id=3]
+[ext_resource path="res://assets/arts/SmallHandleFilledGrey.png" type="Texture" id=4]
+
+[node name="JoyStick" type="TextureRect"]
+margin_left = 8.40942
+margin_right = 364.409
+margin_bottom = 356.0
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Center Ring" type="TextureRect" parent="."]
+margin_left = 130.134
+margin_top = 128.447
+margin_right = 230.134
+margin_bottom = 228.447
+texture = ExtResource( 3 )
+
+[node name="JoyStick_Ring" type="TextureRect" parent="."]
+margin_left = 130.134
+margin_top = 128.447
+margin_right = 230.134
+margin_bottom = 228.447
+texture = ExtResource( 4 )
+

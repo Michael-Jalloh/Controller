@@ -1,0 +1,71 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Controller.gd" type="Script" id=1]
+[ext_resource path="res://utils/JoyStick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/arts/White/2x/buttonA.png" type="Texture" id=3]
+[ext_resource path="res://assets/arts/Black/2x/buttonA.png" type="Texture" id=4]
+[ext_resource path="res://assets/arts/White/2x/buttonB.png" type="Texture" id=5]
+[ext_resource path="res://assets/arts/Black/2x/buttonB.png" type="Texture" id=6]
+[ext_resource path="res://assets/arts/White/2x/buttonStart.png" type="Texture" id=7]
+[ext_resource path="res://assets/arts/Black/2x/buttonStart.png" type="Texture" id=8]
+[ext_resource path="res://assets/arts/White/2x/buttonSelect.png" type="Texture" id=9]
+[ext_resource path="res://assets/arts/Black/2x/buttonSelect.png" type="Texture" id=10]
+[ext_resource path="res://assets/arts/White/2x/gear.png" type="Texture" id=11]
+[ext_resource path="res://assets/arts/Black/2x/gear.png" type="Texture" id=12]
+[ext_resource path="res://utils/Socket.tscn" type="PackedScene" id=13]
+
+[node name="Controller" type="Node"]
+script = ExtResource( 1 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="JoyStick" parent="UI" groups=[
+"axes",
+] instance=ExtResource( 2 )]
+margin_left = 30.3583
+margin_top = 685.189
+margin_right = 386.358
+margin_bottom = 1041.19
+radius = 75.0
+dead_zone = 0.09
+
+[node name="A" type="TouchScreenButton" parent="UI" groups=[
+"buttons",
+]]
+position = Vector2( 1407.5, 711.11 )
+scale = Vector2( 1.68659, 1.78467 )
+normal = ExtResource( 3 )
+pressed = ExtResource( 4 )
+
+[node name="B" type="TouchScreenButton" parent="UI" groups=[
+"buttons",
+]]
+position = Vector2( 1677.24, 529.654 )
+scale = Vector2( 1.68659, 1.78467 )
+normal = ExtResource( 5 )
+pressed = ExtResource( 6 )
+
+[node name="Start" type="TouchScreenButton" parent="UI" groups=[
+"buttons",
+]]
+position = Vector2( 985.745, 804.289 )
+scale = Vector2( 1.68659, 1.78467 )
+normal = ExtResource( 7 )
+pressed = ExtResource( 8 )
+
+[node name="Select" type="TouchScreenButton" parent="UI" groups=[
+"buttons",
+]]
+position = Vector2( 696.397, 804.289 )
+scale = Vector2( 1.68659, 1.78467 )
+normal = ExtResource( 9 )
+pressed = ExtResource( 10 )
+
+[node name="Settings" type="TouchScreenButton" parent="UI"]
+position = Vector2( 1672.33, 58.8503 )
+scale = Vector2( 1.687, 1.785 )
+normal = ExtResource( 11 )
+pressed = ExtResource( 12 )
+
+[node name="Socket" parent="." instance=ExtResource( 13 )]
+

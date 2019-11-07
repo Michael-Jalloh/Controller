@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://utils/JoyStick.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/arts/big_circle.png" type="Texture" id=2]
+[ext_resource path="res://assets/arts/small_circle.png" type="Texture" id=3]
+
+[node name="JoyStick2" instance=ExtResource( 1 )]
+margin_left = 0.0
+margin_right = 222.0
+margin_bottom = 222.0
+texture = ExtResource( 2 )
+
+[node name="JoyStick_Ring" parent="." index="0"]
+modulate = Color( 1, 1, 1, 0.317647 )
+margin_left = 50.4654
+margin_top = 59.8435
+margin_right = 146.465
+margin_bottom = 155.843
+texture = ExtResource( 3 )
+
